@@ -1,5 +1,7 @@
 package src.banco;
 
+
+
 class BancoTeste{
     public static void main(String[] args) {
         Cliente cliente = new Cliente();
@@ -9,12 +11,17 @@ class BancoTeste{
         conta.setTitular(cliente);
 
         conta.depositar(1000.0);
-        conta.consultarSaldo();
+        System.out.println("Saldo de R$ "+ conta.consultarSaldo().toString());
         conta.sacar(800.0);
-        conta.consultarSaldo();
+        System.out.println("Saldo de R$ "+ conta.consultarSaldo().toString());
         conta.depositar(100.0);
         conta.sacar(500.0);
-        conta.consultarSaldo();
-        conta.consultarTitular();
+        System.out.println("Saldo de R$ "+ conta.consultarSaldo().toString());
+        System.out.println("Dona(o) da Conta é "+ conta.consultarTitular());
+
+        conta.sacar(138.32);
+        System.out.println("Saldo de R$ "+ conta.consultarSaldo().toString());
+
+        ;
     }
 }
