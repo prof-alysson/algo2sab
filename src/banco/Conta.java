@@ -28,4 +28,18 @@ class Conta {
             System.out.println("Saldo insuficiente");
         }
     }
+
+    public void parcelarCompra(Double valorCompra, Integer qtdeParcelas){
+        valorCompra *= 100;
+        Integer valorCompraEmCentavos = valorCompra.intValue();
+        Integer valorParcela = valorCompraEmCentavos / qtdeParcelas;
+        Integer acrescimoPrimeiraParcela = valorCompraEmCentavos % qtdeParcelas;
+        for (int i = 1; i <= qtdeParcelas; i++) {
+            Integer valorPagar = valorParcela;
+            if(i==1) {
+                valorPagar += acrescimoPrimeiraParcela;
+            }
+            System.out.printf("Valor a pagar na %d parcela é de %.2f\n", i, valorPagar.doubleValue()/100);
+        }
+    }
 }

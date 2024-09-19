@@ -21,6 +21,9 @@ class BancoTeste{
 
         conta.sacar(138.32);
         System.out.println("Saldo de R$ "+ conta.consultarSaldo().toString());
+        conta.parcelarCompra(100.00, 3);
+
+        conta.parcelarCompra(232.43, 4);
 
         ;
     }
