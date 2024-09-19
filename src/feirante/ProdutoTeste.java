@@ -5,9 +5,6 @@ import java.util.Scanner;
 public class ProdutoTeste {
 
     public static void main(String[] args) {
-
-        Scanner entra = new Scanner(System.in);
-
         Produto produto = new Produto();
         produto.setNome("Boneca de pano");
         produto.setPreco(38.43);
@@ -22,8 +19,8 @@ public class ProdutoTeste {
         maisUmProduto.setNome("Vestido de boneca");
         maisUmProduto.setPreco(15.00);
         maisUmProduto.setQuantidadeEmEstoque(50);
-        System.out.println("Quantas bonecas? ");
-        produto.vender(entra.nextInt());
+
+        produto.vender(2);
         outroProduto.vender(1);
         maisUmProduto.vender(10);
 
